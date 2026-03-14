@@ -36,11 +36,11 @@ python3 ~/.claude/skills/bydfi-features-trader/bydfi_features.py balance
 Just talk to Claude:
 
 ```
-"帮我买0.1个BTC合约"
-"查看我的持仓"
-"BTC现在什么价格"
-"设置ETH止损10%"
-"平掉BTC多单"
+"Buy 0.1 BTC perpetual contract"
+"Show my positions"
+"What is the BTC price"
+"Set ETH stop-loss at 10%"
+"Close my BTC long position"
 ```
 
 Or use CLI directly:
