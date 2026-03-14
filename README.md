@@ -1,4 +1,4 @@
-# BYDFi Features Trader - Claude Code Skill
+# BYDFi Futures Trader - Claude Code Skill
 
 A Claude Code skill for trading crypto futures contracts on **BYDFi production exchange** (api.bydfi.com). Configure your API key once, then trade with real funds by talking to Claude.
 
@@ -8,14 +8,14 @@ A Claude Code skill for trading crypto futures contracts on **BYDFi production e
 
 ```bash
 # 1. Copy files to skill directory
-mkdir -p ~/.claude/skills/bydfi-features-trader
-cp SKILL.md bydfi_features.py ~/.claude/skills/bydfi-features-trader/
+mkdir -p ~/.claude/skills/bydfi-futures-trader
+cp SKILL.md bydfi_futures.py ~/.claude/skills/bydfi-futures-trader/
 
 # 2. Install dependency
 pip3 install requests
 
 # 3. Configure API keys
-python3 ~/.claude/skills/bydfi-features-trader/bydfi_features.py setup <your-api-key> <your-secret-key>
+python3 ~/.claude/skills/bydfi-futures-trader/bydfi_futures.py setup <your-api-key> <your-secret-key>
 ```
 
 ## Get API Keys
@@ -27,8 +27,8 @@ python3 ~/.claude/skills/bydfi-features-trader/bydfi_features.py setup <your-api
 ## Verify Setup
 
 ```bash
-python3 ~/.claude/skills/bydfi-features-trader/bydfi_features.py price BTC-USDT
-python3 ~/.claude/skills/bydfi-features-trader/bydfi_features.py balance
+python3 ~/.claude/skills/bydfi-futures-trader/bydfi_futures.py price BTC-USDT
+python3 ~/.claude/skills/bydfi-futures-trader/bydfi_futures.py balance
 ```
 
 ## Usage
@@ -46,7 +46,7 @@ Just talk to Claude:
 Or use CLI directly:
 
 ```bash
-S=~/.claude/skills/bydfi-features-trader/bydfi_features.py
+S=~/.claude/skills/bydfi-futures-trader/bydfi_futures.py
 
 python3 $S price BTC-USDT          # Check price
 python3 $S balance                  # Check balance
@@ -66,7 +66,7 @@ python3 $S help                    # All commands
 
 ## Configuration
 
-Config saved at `~/.bydfi/features_config.json` (permissions 600):
+Config saved at `~/.bydfi/futures_config.json` (permissions 600):
 
 ```json
 {
@@ -121,9 +121,9 @@ export BYDFI_WALLET="W001"
 ## Files
 
 ```
-bydfi-features-trader/
+bydfi-futures-trader/
 ├── SKILL.md              # Claude Code skill definition
-├── bydfi_features.py     # Trading CLI
+├── bydfi_futures.py     # Trading CLI
 └── README.md             # This file
 ```
 
