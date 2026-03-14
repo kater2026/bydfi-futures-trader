@@ -113,7 +113,7 @@ def cmd_setup(args):
     print(f"\nConfig saved to {CONFIG_PATH} (permissions: 600)")
     print(f"  API Key:    {existing['api_key'][:8]}...{existing['api_key'][-4:]}")
     print(f"  Secret Key: {existing['secret_key'][:8]}...{existing['secret_key'][-4:]}")
-    print(f"  Wallet:     {existing['wallet']}")
+    print(f"  Wallet:     {existing.get('wallet', 'W001')}")
     print(f"  Environment: PRODUCTION (api.bydfi.com)")
     print("\nReady to trade! Try: python3 bydfi_futures.py price BTC-USDT")
 
