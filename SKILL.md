@@ -1,6 +1,6 @@
 ---
 name: bydfi-futures-trader
-description: Use when user wants to trade crypto futures contracts on BYDFi production environment (real money) - placing orders, checking positions, querying prices, managing leverage, transferring funds, setting take-profit or stop-loss. Triggers on keywords like contract, futures, open position, close position, leverage, buy BTC, sell ETH, check balance, TP, SL, stop loss, take profit.
+description: Use when user mentions BYDFi and wants to trade futures contracts on production (real money) - placing orders, checking positions, querying prices, managing leverage, transferring funds, setting TP/SL. Requires "bydfi" keyword or when only one exchange skill is installed. Triggers on: bydfi price, bydfi balance, bydfi buy/sell, bydfi position, bydfi futures.
 ---
 
 # BYDFi Futures Trader
