@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
-BYDFi Features Trader CLI - 永续合约交易命令行工具 (生产环境)
+BYDFi Futures Trader CLI - 永续合约交易命令行工具 (生产环境)
 连接 BYDFi 主网 (api.bydfi.com)，使用真实资金，请谨慎操作。
 
 Setup (first time):
-  python3 bydfi_features.py setup <api_key> <secret_key> [wallet]
-  # Or interactive: python3 bydfi_features.py setup
-  # Config saved to ~/.bydfi/features_config.json (chmod 600)
+  python3 bydfi_futures.py setup <api_key> <secret_key> [wallet]
+  # Or interactive: python3 bydfi_futures.py setup
+  # Config saved to ~/.bydfi/futures_config.json (chmod 600)
   # Env vars override config file if set.
 
 Usage:
-  python3 bydfi_features.py <command> [options]
+  python3 bydfi_futures.py <command> [options]
 
 Commands:
   setup [api_key] [secret_key]            # Configure API keys
@@ -61,15 +61,15 @@ except ImportError:
 
 # === Configuration ===
 # Priority: environment variables > config file > defaults
-# Config file: ~/.bydfi/features_config.json
+# Config file: ~/.bydfi/futures_config.json
 # PRODUCTION ONLY - connects to api.bydfi.com (real money)
 
-CONFIG_PATH = os.path.expanduser("~/.bydfi/features_config.json")
+CONFIG_PATH = os.path.expanduser("~/.bydfi/futures_config.json")
 BASE_URL = "https://api.bydfi.com/api"
 
 
 def load_config():
-    """Load config from ~/.bydfi/features_config.json, merge with env vars."""
+    """Load config from ~/.bydfi/futures_config.json, merge with env vars."""
     conf = {}
     if os.path.exists(CONFIG_PATH):
         with open(CONFIG_PATH) as f:
@@ -82,7 +82,7 @@ def load_config():
 
 
 def cmd_setup(args):
-    """Interactive setup: create ~/.bydfi/features_config.json"""
+    """Interactive setup: create ~/.bydfi/futures_config.json"""
     config_dir = os.path.dirname(CONFIG_PATH)
     os.makedirs(config_dir, mode=0o700, exist_ok=True)
 
@@ -98,7 +98,7 @@ def cmd_setup(args):
         if len(args) > 2:
             existing["wallet"] = args[2]
     else:
-        print("BYDFi Features Trader - Setup (PRODUCTION)")
+        print("BYDFi Futures Trader - Setup (PRODUCTION)")
         print("=" * 40)
         print("WARNING: This connects to api.bydfi.com with REAL funds.")
         print()
@@ -113,9 +113,9 @@ def cmd_setup(args):
     print(f"\nConfig saved to {CONFIG_PATH} (permissions: 600)")
     print(f"  API Key:    {existing['api_key'][:8]}...{existing['api_key'][-4:]}")
     print(f"  Secret Key: {existing['secret_key'][:8]}...{existing['secret_key'][-4:]}")
-    print(f"  Wallet:     {existing['wallet']}")
+    print(f"  Wallet:     {existing.get('wallet', 'W001')}")
     print(f"  Environment: PRODUCTION (api.bydfi.com)")
-    print("\nReady to trade! Try: python3 bydfi_features.py price BTC-USDT")
+    print("\nReady to trade! Try: python3 bydfi_futures.py price BTC-USDT")
 
 
 cfg = load_config()
@@ -173,7 +173,7 @@ def check_keys():
         print("Error: API keys not configured.")
         print()
         print("Run setup first:")
-        print("  python3 ~/.claude/skills/bydfi-features-trader/bydfi_features.py setup <api_key> <secret_key>")
+        print("  python3 ~/.claude/skills/bydfi-futures-trader/bydfi_futures.py setup <api_key> <secret_key>")
         print()
         print("Or set environment variables:")
         print("  export BYDFI_API_KEY='your-key'")

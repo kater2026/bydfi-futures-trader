@@ -1,11 +1,11 @@
 ---
-name: bydfi-features-trader
-description: Use when user wants to trade crypto perpetual contracts on BYDFi production environment (real money) - placing orders, checking positions, querying prices, managing leverage, transferring funds, setting take-profit or stop-loss. Triggers on keywords like contract, futures, open position, close position, leverage, buy BTC, sell ETH, check balance, TP, SL, stop loss, take profit.
+name: bydfi-futures-trader
+description: Use when user wants to trade crypto futures contracts on BYDFi production environment (real money) - placing orders, checking positions, querying prices, managing leverage, transferring funds, setting take-profit or stop-loss. Triggers on keywords like contract, futures, open position, close position, leverage, buy BTC, sell ETH, check balance, TP, SL, stop loss, take profit.
 ---
 
-# BYDFi Features Trader
+# BYDFi Futures Trader
 
-Crypto perpetual contract trading on BYDFi **production** exchange (api.bydfi.com) via CLI tool.
+Crypto futures contract trading on BYDFi **production** exchange (api.bydfi.com) via CLI tool.
 
 > **WARNING: This skill uses REAL funds. All trades are on the live BYDFi exchange.**
 
@@ -18,10 +18,10 @@ pip3 install requests
 
 ### Step 2: Configure API Keys
 ```bash
-python3 ~/.claude/skills/bydfi-features-trader/bydfi_features.py setup <your-api-key> <your-secret-key> [wallet]
+python3 ~/.claude/skills/bydfi-futures-trader/bydfi_futures.py setup <your-api-key> <your-secret-key> [wallet]
 ```
 
-Config is saved to `~/.bydfi/features_config.json` (permissions 600).
+Config is saved to `~/.bydfi/futures_config.json` (permissions 600).
 
 **Configuration priority:** environment variables > config file.
 
@@ -32,11 +32,11 @@ Config is saved to `~/.bydfi/features_config.json` (permissions 600).
 
 ### Step 3: Verify
 ```bash
-python3 ~/.claude/skills/bydfi-features-trader/bydfi_features.py price BTC-USDT
-python3 ~/.claude/skills/bydfi-features-trader/bydfi_features.py balance
+python3 ~/.claude/skills/bydfi-futures-trader/bydfi_futures.py price BTC-USDT
+python3 ~/.claude/skills/bydfi-futures-trader/bydfi_futures.py balance
 ```
 
-### Config File (`~/.bydfi/features_config.json`)
+### Config File (`~/.bydfi/futures_config.json`)
 ```json
 {
   "api_key": "your-api-key",
@@ -61,7 +61,7 @@ export BYDFI_WALLET="W001"
 ## How to Use
 
 ```bash
-python3 ~/.claude/skills/bydfi-features-trader/bydfi_features.py <command> [args]
+python3 ~/.claude/skills/bydfi-futures-trader/bydfi_futures.py <command> [args]
 ```
 
 ## Quick Reference
