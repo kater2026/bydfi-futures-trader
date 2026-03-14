@@ -1,6 +1,6 @@
 # BYDFi Features Trader - Claude Code Skill
 
-A Claude Code skill for trading crypto perpetual contracts on **BYDFi production exchange** (api.bydfi.com). Configure your API key once, then trade with real funds by talking to Claude.
+A Claude Code skill for trading crypto futures contracts on **BYDFi production exchange** (api.bydfi.com). Configure your API key once, then trade with real funds by talking to Claude.
 
 > **WARNING: This skill connects to the live BYDFi exchange and uses REAL funds. Always confirm trades before executing.**
 
@@ -36,7 +36,7 @@ python3 ~/.claude/skills/bydfi-features-trader/bydfi_features.py balance
 Just talk to Claude:
 
 ```
-"Buy 0.1 BTC perpetual contract"
+"Buy 0.1 BTC futures contract"
 "Show my positions"
 "What is the BTC price"
 "Set ETH stop-loss at 10%"

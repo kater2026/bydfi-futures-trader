@@ -1,11 +1,11 @@
 ---
 name: bydfi-features-trader
-description: Use when user wants to trade crypto perpetual contracts on BYDFi production environment (real money) - placing orders, checking positions, querying prices, managing leverage, transferring funds, setting take-profit or stop-loss. Triggers on keywords like contract, futures, open position, close position, leverage, buy BTC, sell ETH, check balance, TP, SL, stop loss, take profit.
+description: Use when user wants to trade crypto futures contracts on BYDFi production environment (real money) - placing orders, checking positions, querying prices, managing leverage, transferring funds, setting take-profit or stop-loss. Triggers on keywords like contract, futures, open position, close position, leverage, buy BTC, sell ETH, check balance, TP, SL, stop loss, take profit.
 ---
 
 # BYDFi Features Trader
 
-Crypto perpetual contract trading on BYDFi **production** exchange (api.bydfi.com) via CLI tool.
+Crypto futures contract trading on BYDFi **production** exchange (api.bydfi.com) via CLI tool.
 
 > **WARNING: This skill uses REAL funds. All trades are on the live BYDFi exchange.**
 
