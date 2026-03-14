@@ -39,10 +39,14 @@ python3 ~/.claude/skills/bydfi-futures-trader/bydfi_futures.py setup <your-api-k
 
 ## Verify Setup
 
-```bash
-python3 ~/.claude/skills/bydfi-futures-trader/bydfi_futures.py price BTC-USDT
-python3 ~/.claude/skills/bydfi-futures-trader/bydfi_futures.py balance
+Open Claude Code and say:
+
 ```
+"What is the BTC price?"
+"Check my balance"
+```
+
+Claude will automatically use this skill to fetch live data from BYDFi.
 
 ## Usage
 
