@@ -6,6 +6,19 @@ A Claude Code skill for trading crypto futures contracts on **BYDFi production e
 
 ## Quick Install
 
+Run this one-liner in your terminal:
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/kater2026/bydfi-futures-trader/main/install.sh)
+```
+
+The installer will:
+1. Download skill files to `~/.claude/skills/bydfi-futures-trader/`
+2. Install the `requests` dependency
+3. Prompt for your BYDFi API key and secret
+
+## Manual Install
+
 ```bash
 # 1. Copy files to skill directory
 mkdir -p ~/.claude/skills/bydfi-futures-trader
