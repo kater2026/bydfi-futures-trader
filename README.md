@@ -42,7 +42,14 @@ python3 ~/.claude/skills/bydfi-futures-trader/bydfi_futures.py setup <your-api-k
 Open Claude Code and say:
 
 ```
-"What is the BTC price?"
+"BYDFi BTC price"
+"Check my BYDFi balance"
+```
+
+If this is the only exchange skill installed, you can also say:
+
+```
+"BTC price"
 "Check my balance"
 ```
 
